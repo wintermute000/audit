@@ -1,0 +1,11 @@
+Value NEIGHBOR_ID (\S+)
+Value PRIORITY (\S+)
+Value STATE (\S+(\s+-)?)
+Value DEAD_TIME (\S+)
+Value ADDRESS (\S+)
+Value INTERFACE (\S+)
+
+
+Start
+  ^Neighbor\sID\s+Pri\s+State\s+Dead\sTime\s+Address\s+Interface
+  ^${NEIGHBOR_ID}\s+${PRIORITY}\s+${STATE}\s+${DEAD_TIME}\s+${ADDRESS}\s+${INTERFACE} -> Record
